@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "version": "1.1",
+    "generated": "2026-08-25",
+    "corrections_applied": [
+      "Assembly time corrected to 2.0-5.5 hrs per bike (not 45-60 min — that is automated high-volume factory only)",
+      "Mountain bike wheel size corrected to 29in (not 27.5in)",
+      "Mountain bike brakes corrected to hydraulic disc (not V-brake)",
+      "Road drivetrain corrected to 2x11 / 22-speed (not '21-speed' which is a 3x7 entry-level groupset)",
+      "Frame sizes corrected to model-specific size ranges (not universal 19in)",
+      "Brake duty rate corrected to 0% HS 8714 (not 2.6% — that category was misclassified)",
+      "Critical path day numbers are relative inbound SEQUENCING, not absolute lead times from PO placement",
+      "Bike model lineup expanded to 6 models: Mountain, Road, Kids, Mens Cruiser, Womens Hybrid, BMX"
+    ]
+  },
+
+  "exchange_rates": {
+    "note": "Fixed demo rates — do not call live API",
+    "CNY_to_USD": 0.138,
+    "EUR_to_USD": 1.085,
+    "VND_to_USD": 0.0000394,
+    "JPY_to_USD": 0.00667,
+    "TWD_to_USD": 0.031
+  },
+
+  "incoterm_rules": {
+    "DDP": {"buyer_pays_freight": false, "buyer_pays_duty": false, "buyer_pays_insurance": false, "add_freight": 0.00, "add_duty": false, "add_insurance": false},
+    "CIF": {"buyer_pays_freight": false, "buyer_pays_duty": true,  "buyer_pays_insurance": false, "add_freight": 0.00, "add_duty": true,  "add_insurance": false},
+    "FOB": {"buyer_pays_freight": true,  "buyer_pays_duty": true,  "buyer_pays_insurance": true,  "add_freight": true,  "add_duty": true,  "add_insurance": true},
+    "EXW": {"buyer_pays_freight": true,  "buyer_pays_duty": true,  "buyer_pays_insurance": true,  "add_freight": true,  "add_duty": true,  "add_insurance": true, "note": "Highest risk — buyer pays pickup from factory gate plus all downstream costs"}
+  },
+
+  "standard_freight_rates_sea_to_los_angeles": {
+    "note": "Per unit, standard ocean freight. Air freight adds ~5x.",
+    "Taiwan": {"small_parts_usd": 0.20, "medium_parts_usd": 0.55, "large_parts_frame_usd": 2.50, "transit_days": 18},
+    "Japan":  {"small_parts_usd": 0.22, "medium_parts_usd": 0.60, "large_parts_frame_usd": 2.80, "transit_days": 14},
+    "China_Shenzhen": {"small_parts_usd": 0.18, "medium_parts_usd": 0.50, "large_parts_frame_usd": 2.20, "transit_days": 21},
+    "China_Guangzhou": {"small_parts_usd": 0.19, "medium_parts_usd": 0.52, "large_parts_frame_usd": 2.25, "transit_days": 21},
+    "China_Shanghai": {"small_parts_usd": 0.18, "medium_parts_usd": 0.50, "large_parts_frame_usd": 2.10, "transit_days": 16},
+    "Vietnam": {"small_parts_usd": 0.24, "medium_parts_usd": 0.62, "large_parts_frame_usd": 2.60, "transit_days": 22},
+    "Germany": {"small_parts_usd": 0.32, "medium_parts_usd": 0.70, "large_parts_frame_usd": 3.20, "transit_days": 12},
+    "Italy":   {"small_parts_usd": 0.35, "medium_parts_usd": 0.75, "large_parts_frame_usd": 3.40, "transit_days": 13},
+    "Austria": {"small_parts_usd": 0.40, "medium_parts_usd": 0.85, "large_parts_frame_usd": 3.80, "transit_days": 12},
+    "air_freight_multiplier": 5.2
+  },
+
+  "duty_rates_by_part_family": {
+    "note": "US import duty rates. Source: HTSUS. Rates subject to change. Section 301 China tariffs may apply — check current status.",
+    "FF_frames_aluminum_steel": {"hs_code": "8714.91.90", "rate_pct": 2.5, "note": "Aluminum and steel bicycle frames"},
+    "FF_frames_carbon":         {"hs_code": "8714.91.30", "rate_pct": 0.0, "note": "Carbon fiber frames duty-free"},
+    "FF_forks":                 {"hs_code": "8714.91.90", "rate_pct": 2.5},
+    "FF_headsets":              {"hs_code": "8714.99.80", "rate_pct": 2.5},
+    "DT_drivetrain":            {"hs_code": "8714.99.80", "rate_pct": 0.0, "note": "Most drivetrain parts duty-free under HS 8714"},
+    "BR_brakes":                {"hs_code": "8714.99.80", "rate_pct": 0.0, "note": "Bicycle brake parts duty-free — NOT 2.6% (misclassification correction)"},
+    "WH_rims_hubs":             {"hs_code": "8714.99.80", "rate_pct": 2.5},
+    "WH_spokes":                {"hs_code": "8714.99.80", "rate_pct": 2.5},
+    "WH_tires":                 {"hs_code": "4011.50.00", "rate_pct": 0.0, "note": "Bicycle tires duty-free"},
+    "WH_tubes":                 {"hs_code": "4013.20.00", "rate_pct": 0.0, "note": "Bicycle inner tubes duty-free"},
+    "CK_handlebars_stems":      {"hs_code": "8714.99.80", "rate_pct": 2.5},
+    "CK_grips_tape":            {"hs_code": "8714.99.80", "rate_pct": 0.0},
+    "SS_saddles":               {"hs_code": "8714.95.00", "rate_pct": 0.0, "note": "Bicycle saddles duty-free"},
+    "SS_seatposts":             {"hs_code": "8714.99.80", "rate_pct": 2.5},
+    "PD_pedals":                {"hs_code": "8714.99.80", "rate_pct": 0.0},
+    "HW_cables":                {"hs_code": "8714.99.80", "rate_pct": 0.0},
+    "HW_hardware":              {"hs_code": "7318.15.80", "rate_pct": 2.5},
+    "HW_reflectors":            {"hs_code": "8714.99.80", "rate_pct": 0.0},
+    "HW_packaging":             {"hs_code": "4819.10.00", "rate_pct": 0.0},
+    "conservative_default_pct": 2.5
+  },
+
+  "insurance_rate": 0.005,
+  "insurance_note": "0.5% of (unit_price + freight + duty). Apply only for FOB or EXW incoterms.",
+
+  "landed_cost_formula": {
+    "step_1": "Convert quote to USD using exchange_rates above",
+    "step_2": "If incoterm is FOB or EXW: add freight_cost_usd from parts_sourcing_meta.json",
+    "step_3": "If incoterm is FOB, CIF, or EXW: apply duty = (usd_price + freight) * duty_rate_pct",
+    "step_4": "If incoterm is FOB or EXW: apply insurance = (usd_price + freight + duty) * 0.005",
+    "step_5": "Apply volume-adjusted unit price from moq_price_breaks in parts_sourcing_meta.json",
+    "step_6": "If order_qty < moq: apply 15% surcharge",
+    "formula": "landed_cost = volume_adjusted_price + freight + duty + insurance + moq_surcharge"
+  },
+
+  "moq_surcharge_rule": {
+    "trigger": "order_qty < supplier_moq",
+    "surcharge_rate": 0.15,
+    "note": "15% added to base unit price when ordering below MOQ. Covers supplier setup and handling."
+  },
+
+  "corrected_critical_path": {
+    "note": "Day numbers below are RELATIVE INBOUND SEQUENCING — the order in which parts arrive at facility once all are en route. Absolute lead times from PO are 10-50 days depending on supplier and model — see assembly_estimates.json for per-model actual lead times.",
+    "arrival_sequence_at_facility": [
+      {"relative_arrival": "First",  "parts": ["Hardware kits", "Cables", "Rim tape", "Reflectors"],            "gates_assembly": false, "why": "Simple commodity parts ship fastest"},
+      {"relative_arrival": "Second", "parts": ["Tires", "Tubes", "Grips", "Saddles", "Pedals"],                 "gates_assembly": false, "why": "Standard rubber and soft goods"},
+      {"relative_arrival": "Third",  "parts": ["Hubs", "Spokes", "Headsets", "Seatpost clamps"],               "gates_assembly": true,  "why": "Wheel building can begin"},
+      {"relative_arrival": "Fourth", "parts": ["Rims", "Chains", "Cassettes", "BBs", "Brake calipers", "Brake pads", "Handlebars", "Stems", "Seatposts", "Pedals"], "gates_assembly": true, "why": "Core assembly parts"},
+      {"relative_arrival": "Fifth",  "parts": ["Cranksets", "Derailleurs", "Shifters", "Brake levers", "Saddles"], "gates_assembly": true, "why": "Drivetrain and control system"},
+      {"relative_arrival": "Last — Critical Path Anchor", "parts": ["Frames (all models)", "Suspension Fork (MTB only)"], "gates_assembly": true, "why": "Frame is always the longest lead-time item; assembly cannot start until frame arrives"}
+    ],
+    "assembly_blocked_without": ["Frame", "Fork", "Wheels (rim+hub+spokes built)", "Crankset", "Brakes", "Handlebar and stem"],
+    "assembly_can_start_without": ["Grips", "Bar tape", "Saddle (for non-test-ride steps)", "Reflectors", "Pedals", "Packaging"],
+    "corrected_assembly_duration_hours_per_bike": {
+      "MTB":          {"min": 4.5, "max": 5.5, "batch_50_avg": 4.0},
+      "Road":         {"min": 3.5, "max": 4.5, "batch_50_avg": 3.2},
+      "Kids":         {"min": 1.5, "max": 2.5, "batch_50_avg": 1.5},
+      "Mens_Cruiser": {"min": 2.0, "max": 3.0, "batch_50_avg": 2.2},
+      "Womens_Hybrid":{"min": 2.5, "max": 3.5, "batch_50_avg": 2.7},
+      "BMX":          {"min": 2.0, "max": 3.0, "batch_50_avg": 2.0},
+      "wrong_value_in_prior_doc": "45-60 minutes is only achievable in a >50,000 unit/year fully automated factory — not applicable to D2C batch production"
+    }
+  },
+
+  "substitution_rules": [
+    {"part_family": "Frame",           "substitutable": "NO",      "reason": "SKU-specific geometry, dropout spacing, BB shell type, and paint — cannot swap across models"},
+    {"part_family": "Suspension Fork", "substitutable": "NO",      "reason": "Travel, steerer diameter, axle standard, and brake mount all model-specific"},
+    {"part_family": "Rigid Fork",      "substitutable": "LIMITED", "reason": "Must match steerer diameter (1-1/8in standard) and axle spacing — some cross-model flexibility"},
+    {"part_family": "Headset",         "substitutable": "LIMITED", "reason": "Must match frame head tube standard (IS41 or EC44) — one standard covers most models"},
+    {"part_family": "Crankset",        "substitutable": "LIMITED", "reason": "Must match BB interface (BSA vs PF), chain line, and speed count — some cross-model use"},
+    {"part_family": "Bottom Bracket",  "substitutable": "LIMITED", "reason": "Shell-specific (BSA 68mm, BB86, Mid BMX) — not interchangeable across shell types"},
+    {"part_family": "Chain",           "substitutable": "YES",     "reason": "Same speed-count chains are commodity — any ISO 9-speed chain fits any 9-speed drivetrain"},
+    {"part_family": "Cassette",        "substitutable": "LIMITED", "reason": "Speed count and range must match derailleur capacity — same-speed cassettes often interchangeable"},
+    {"part_family": "Freewheel",       "substitutable": "YES",     "reason": "Standard threaded interface — any 16T 1/2x1/8 freewheel works"},
+    {"part_family": "Front Derailleur","substitutable": "LIMITED", "reason": "Speed count, clamp size, and pull direction must match"},
+    {"part_family": "Rear Derailleur", "substitutable": "LIMITED", "reason": "Speed count and cage length must match cassette range"},
+    {"part_family": "Shifters",        "substitutable": "LIMITED", "reason": "Must match derailleur speed count and actuation ratio — road STI not interchangeable with MTB trigger"},
+    {"part_family": "Hydraulic Brake Levers", "substitutable": "LIMITED", "reason": "Mineral oil vs DOT fluid systems are incompatible; must match caliper brand family"},
+    {"part_family": "V-Brake Levers",  "substitutable": "YES",     "reason": "Standard linear pull — any V-brake lever works with any V-brake caliper"},
+    {"part_family": "Hydraulic Calipers","substitutable": "LIMITED","reason": "Must match lever fluid type; post-mount standard is widely compatible"},
+    {"part_family": "V-Brake Calipers","substitutable": "YES",     "reason": "Standard 107mm arm V-brake — widely interchangeable"},
+    {"part_family": "Disc Rotors",     "substitutable": "YES",     "reason": "Same diameter and mount standard (center-lock or 6-bolt) — widely interchangeable"},
+    {"part_family": "Brake Pads",      "substitutable": "YES",     "reason": "Commodity part — must match brake type (disc vs rim) but many suppliers"},
+    {"part_family": "Brake Cables",    "substitutable": "YES",     "reason": "Commodity — standard stainless cable and 5mm housing"},
+    {"part_family": "Rims",            "substitutable": "LIMITED", "reason": "Must match wheel diameter, hole count, and brake type (disc vs rim brake wall)"},
+    {"part_family": "Hubs",            "substitutable": "LIMITED", "reason": "Must match axle standard, OLD spacing, hole count, and freehub type"},
+    {"part_family": "Spokes",          "substitutable": "YES",     "reason": "Commodity stainless steel — same gauge (14g) works across builds"},
+    {"part_family": "Tires",           "substitutable": "YES",     "reason": "Same diameter and approximate width — many brands work; tread pattern preference varies"},
+    {"part_family": "Inner Tubes",     "substitutable": "YES",     "reason": "Commodity — any tube matching diameter range and valve type works"},
+    {"part_family": "Rim Tape",        "substitutable": "YES",     "reason": "Commodity — must match rim width but any brand works"},
+    {"part_family": "Handlebar",       "substitutable": "LIMITED", "reason": "Clamp diameter (31.8mm or 25.4mm) must match stem; width and shape affect riding position"},
+    {"part_family": "Stem",            "substitutable": "LIMITED", "reason": "Bar clamp and steerer clamp diameters must match; length and angle affect fit"},
+    {"part_family": "Grips",           "substitutable": "YES",     "reason": "Commodity — any 22mm grip fits standard flat bars"},
+    {"part_family": "Bar Tape",        "substitutable": "YES",     "reason": "Commodity — any 2m roll of bar tape works on drop bars"},
+    {"part_family": "Saddle",          "substitutable": "YES",     "reason": "Rail width standard (44mm) is universal — width and padding are fit preference, not assembly blocker"},
+    {"part_family": "Seatpost",        "substitutable": "LIMITED", "reason": "Diameter must exactly match frame seat tube (27.2mm, 25.4mm, 28.6mm — not interchangeable)"},
+    {"part_family": "Seatpost Clamp",  "substitutable": "YES",     "reason": "Seat tube OD must match — but any clamp of correct diameter works"},
+    {"part_family": "Pedals",          "substitutable": "YES",     "reason": "Thread standard (9/16in adult, 1/2in kids) — same thread size is interchangeable"},
+    {"part_family": "Derailleur Cables","substitutable": "YES",    "reason": "Commodity — standard stainless shift cable and 4mm housing"},
+    {"part_family": "Hardware Kit",    "substitutable": "YES",     "reason": "Standard metric fasteners — any ISO hardware supplier works"},
+    {"part_family": "Reflectors",      "substitutable": "YES",     "reason": "CPSC-compliant reflectors — commodity, any approved supplier"},
+    {"part_family": "QR Skewers",      "substitutable": "YES",     "reason": "Standard 9mm QR — any brand works"},
+    {"part_family": "Axle Nuts",       "substitutable": "YES",     "reason": "Standard 3/8in nuts — commodity hardware"},
+    {"part_family": "Packaging",       "substitutable": "LIMITED", "reason": "Must be sized for the specific bike model — wrong size box cannot be used"}
+  ],
+
+  "single_source_risk_register": [
+    {"part": "All Frames",         "sole_supplier": "SUP-001 (Veloforge Industries, Taiwan)", "risk": "HIGH — all 6 bike models depend on one frame supplier", "mitigation": "Maintain 90-day safety stock; qualify SUP-011 (Kinesis) as backup for rigid-fork models within 12 months"},
+    {"part": "Suspension Fork MTB","sole_supplier": "SUP-007 (AlpineShox, Austria)",          "risk": "HIGH — only qualified suspension fork supplier; 45-day lead is longest in portfolio", "mitigation": "Maintain 60-day safety stock; evaluate RockShox OEM program as secondary qualification"},
+    {"part": "Road STI Shifters",  "sole_supplier": "SUP-002 (SteelPath, Japan)",             "risk": "MEDIUM — premium STI shifters are supplier-specific; 35-day lead", "mitigation": "Maintain 45-day safety stock"},
+    {"part": "Hydraulic Calipers", "sole_supplier": "SUP-003 (BrakeTech, Germany)",           "risk": "MEDIUM — hydraulic system is brand-specific (fluid type)", "mitigation": "Qualify SUP-012 (Tektro) for hydraulic disc; requires re-validation of brake bleed protocol"}
+  ],
+
+  "sourcing_decision_rules": [
+    "1. ALWAYS read frame supplier lead time first — this is the critical path anchor for every model",
+    "2. Suspension fork (MTB only) has longer lead than frame — AlpineShox 45d vs frame 35d. Fork is the true MTB critical path",
+    "3. Prefer DDP quotes (no surprises). CIF is next best. FOB requires careful landed cost calc. Never underestimate EXW.",
+    "4. DO NOT add freight to CIF or DDP quotes — it is already included",
+    "5. DO NOT skip duty on FOB quotes — it is a real buyer cost",
+    "6. If order_qty < MOQ: add 15% surcharge. Do not pretend you can order below MOQ without penalty",
+    "7. Volume discount breakpoints are real — if you need 6,000 units and the break is at 5,000, always hit it",
+    "8. A supplier 3% cheaper but 15 days slower on a critical-path part is NOT the right choice — defer to lead-time specialist",
+    "9. Single-source parts (frames, suspension forks) have no cost optimization levers — focus optimization on commodity parts",
+    "10. Currency quotes: always convert to USD using fixed rates above before comparing suppliers"
+  ]
+}
