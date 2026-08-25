@@ -1,0 +1,151 @@
+=============================================================================
+BIKE MANUFACTURER MULTI-AGENT SOURCING SYSTEM
+Track 03 Specialist Swarm Hackathon — Complete Skills Package
+=============================================================================
+
+WHAT YOU HAVE (Generated Skills)
+─────────────────────────────────
+
+1. BOM STRUCTURE (11 KB, ~350 lines)
+   File: bom-structure.md
+   Purpose: Teaches agent about bike models, parts, criticality, constraints
+   Contains: Three bike models (Commuter, Mountain, Road), 30+ parts, 
+             critical path definition, substitutability rules, MOQ implications
+   Used by: Coordinator (to understand what's a bike and what matters)
+
+2. COST OPTIMIZER (9.9 KB, ~280 lines)
+   File: cost-optimizer.md
+   Purpose: Calculates landed cost and finds cheapest sourcing plan
+   Contains: Landed cost formula, incoterm handling (FOB/CIF/DDP), 
+             duty/freight/insurance/MOQ calculations, worked examples, 
+             BOM aggregation, cost optimization strategies
+   Used by: Coordinator (specialist 1: find lowest-cost suppliers)
+
+3. LEAD-TIME CRITICAL PATH (11 KB, ~330 lines)
+   File: lead-time-critical-path.md
+   Purpose: Identifies bottlenecks and checks deadline compliance
+   Contains: Critical path algorithm, assembly start date calculation, 
+             late scenario mitigation (express freight, faster suppliers),
+             buffer strategy, timeline analysis
+   Used by: Coordinator (specialist 2: confirm we're on-time)
+
+4. SOURCING RECOMMENDATION (15 KB, ~420 lines)
+   File: sourcing-recommendation.md
+   Purpose: Formats final decision as professional sourcing memo
+   Contains: Memo structure (header, executive summary, cost analysis, 
+             lead-time analysis, decision rationale, scenarios), output JSON format
+   Used by: Coordinator (specialist 3: format output)
+
+TOTAL SKILLS: ~1,300 lines of detailed instruction for Claude
+
+─────────────────────────────────────────────────────────────────────────
+
+WHAT YOU HAVE (Documentation)
+──────────────────────────────
+
+→ 00_START_HERE.md — Read this first (overview of everything)
+→ BIKE_SOURCING_SUMMARY.md — What was generated and what's next
+→ SKILLS_README.md — How the skills work together
+→ HACKATHON_CHECKLIST.md — Minute-by-minute build sequence (original pack)
+→ SYNTHETIC_DATA_README.md — Reference data and eval set (original pack)
+
+─────────────────────────────────────────────────────────────────────────
+
+WHAT YOU HAVE (Reference Data from Original Pack)
+──────────────────────────────────────────────────
+
+These were generated for the original single-part RFQ use case.
+They can be adapted for the bike BOM case:
+
+→ duty_rates.csv — Import duty by HS code and origin
+→ freight_rates.csv — Shipping costs by route and mode
+→ fx_rates.csv — Fixed exchange rates (Aug 2026)
+→ incoterm_rules.md — Cost allocation rules
+→ supplier_master.csv — Sample suppliers with profiles
+
+You'll need to expand these for bike parts (frame, wheels, drivetrain, etc.)
+
+─────────────────────────────────────────────────────────────────────────
+
+WHAT YOU NEED TO BUILD (The Coordinator Agent)
+───────────────────────────────────────────────
+
+This is your 90-minute task:
+
+1. Coordinator Logic (the decision tree)
+   - Load bom-structure.md
+   - Call Cost Specialist (claude with cost-optimizer.md context)
+   - Call Lead-Time Specialist (claude with lead-time-critical-path.md context)
+   - DECISION: If lead-time says "late", ask cost specialist for alternatives
+   - Call Output Formatter (claude with sourcing-recommendation.md context)
+
+2. Synthetic Data (supplier quotes, bike orders, ground truth)
+   - Suppliers: 12–15 suppliers with prices by part, lead times, MOQs
+   - Scenarios: 12–15 bike sourcing orders (model, volume, deadline, suppliers)
+   - Ground truth: cheapest plan cost, bottleneck part, on-time? yes/no
+
+3. Evaluation Loop
+   - Run coordinator on 12–15 scenarios
+   - Check: did it pick the right suppliers?
+   - Log: accuracy %, tokens per specialist, cost per decision
+
+4. Demo
+   - Show one live run (40 seconds)
+   - Explain the decision (60 seconds)
+   - Show output memo (30 seconds)
+   - Close on the value (20 seconds)
+
+─────────────────────────────────────────────────────────────────────────
+
+THE PITCH
+─────────
+
+"A bike has 35 parts from 12 suppliers. The cheapest sourcing plan might be
+late. The fastest plan might be too expensive. A sourcing analyst would spend
+a day normalizing quotes and running scenarios. Our system does it in 90
+seconds: cost specialist finds cheapest, lead-time specialist checks if it's
+on-time, coordinator resolves conflicts, and outputs a professional memo
+explaining the tradeoff. Demo: 6,000 Commuter bikes, three suppliers, 
+total cost $822K, on-time delivery, memo ready for approval."
+
+─────────────────────────────────────────────────────────────────────────
+
+FILES AT A GLANCE
+
+Skills (read to understand):
+  bom-structure.md
+  cost-optimizer.md
+  lead-time-critical-path.md
+  sourcing-recommendation.md
+
+Documentation (read to get started):
+  00_START_HERE.md
+  BIKE_SOURCING_SUMMARY.md
+  SKILLS_README.md
+
+Reference Data (adapt for bike parts):
+  duty_rates.csv
+  freight_rates.csv
+  fx_rates.csv
+  incoterm_rules.md
+  supplier_master.csv
+
+Original Pack (for context):
+  HACKATHON_CHECKLIST.md
+  SYNTHETIC_DATA_README.md
+  sourcing-swarm-track03.pptx (7-slide deck, fill in slide 6 after your run)
+
+─────────────────────────────────────────────────────────────────────────
+
+START HERE
+
+1. Read: 00_START_HERE.md (5 min)
+2. Read: BIKE_SOURCING_SUMMARY.md (10 min)
+3. Skim: The four Skill files (understand what each specialist does)
+4. Build: The coordinator agent (follow HACKATHON_CHECKLIST.md timeline)
+5. Test: Run on 1–2 scenarios, verify output format
+6. Demo: 90 seconds, show the decision logic, output memo
+
+Questions? Read the relevant Skill file. Every file has worked examples.
+
+=============================================================================
