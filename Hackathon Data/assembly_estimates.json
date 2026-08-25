@@ -1,0 +1,321 @@
+{
+  "overview": {
+    "description": "Estimated time from when all parts are received at the manufacturer assembly facility to when the finished bike ships to the D2C customer. Includes all inbound supplier lead times as a separate field. Assembly is performed at our contract manufacturer facility in Kent, WA.",
+    "facility": "Apex Cycles Contract Assembly — Kent, WA",
+    "labor_rate_usd_per_hour": 28.50,
+    "shift_hours_per_day": 8,
+    "workers_per_line": 4,
+    "units_per_line_per_shift": "Varies by model — see per-bike estimates"
+  },
+
+  "assembly_estimates": [
+
+    {
+      "bike_sku": "SKU-MTB-APX29",
+      "bike_model": "Apex Trail 29",
+      "complexity": "High",
+
+      "supplier_lead_times": {
+        "critical_path_part": "Coil Suspension Fork (FF-FK-MTB-001)",
+        "critical_path_supplier": "AlpineShox Ltd. — Innsbruck, Austria (SUP-007)",
+        "critical_path_lead_days": 45,
+        "longest_non_critical_lead_days": 42,
+        "all_parts_expected_at_facility_by_day": 50,
+        "note": "AlpineShox ships air freight; transit adds 5 days to 45-day production lead. All other suppliers converge by day 40-43."
+      },
+
+      "assembly_steps": [
+        {"step": 1, "name": "Inbound Inspection and Parts Kitting",       "hours": 0.50, "notes": "Verify all 34 line items, inspect frame and fork for damage"},
+        {"step": 2, "name": "Frame Prep",                                  "hours": 0.50, "notes": "Thread BB shell, press headset cups, install cable routing guides"},
+        {"step": 3, "name": "Suspension Fork Setup",                       "hours": 0.50, "notes": "Set sag, adjust rebound damping, torque steerer clamp"},
+        {"step": 4, "name": "Headset and Steerer Cut",                    "hours": 0.25, "notes": "Install star nut, cut steerer, install top cap and stem"},
+        {"step": 5, "name": "Wheel Building — Front",                     "hours": 0.50, "notes": "Lace 36 spokes, tension, true to within 0.3mm lateral"},
+        {"step": 6, "name": "Wheel Building — Rear",                      "hours": 0.50, "notes": "Lace 36 spokes, tension, true; install cassette and rotor"},
+        {"step": 7, "name": "Tire and Tube Installation",                  "hours": 0.25, "notes": "Mount tires, seat beads, inflate to 30 PSI for shipping"},
+        {"step": 8, "name": "Bottom Bracket and Crankset Installation",   "hours": 0.25, "notes": "Thread BB, torque cranks, install chainrings"},
+        {"step": 9, "name": "Drivetrain — Chain, Cassette, Derailleurs",  "hours": 0.50, "notes": "Install FD and RD, route and cut chain, set limit screws"},
+        {"step": 10,"name": "Shifter and Cable Routing",                   "hours": 0.50, "notes": "Mount shifters, route all cables, set barrel adjusters, index gears"},
+        {"step": 11,"name": "Brake Installation and Bleed",                "hours": 0.75, "notes": "Mount calipers, bleed mineral oil system, bed pads, align rotors"},
+        {"step": 12,"name": "Cockpit Assembly",                            "hours": 0.25, "notes": "Install handlebar, set stem height, torque to spec, install grips"},
+        {"step": 13,"name": "Saddle and Seatpost",                        "hours": 0.15, "notes": "Fit seatpost, set saddle angle and height, install clamp"},
+        {"step": 14,"name": "Pedal Installation and Reflectors",           "hours": 0.10, "notes": "Grease threads, torque pedals L/R, install all reflectors"},
+        {"step": 15,"name": "Full Adjustment and Test Ride (30m)",         "hours": 0.50, "notes": "Verify shifting all 27 gears, brake modulation, check all torques"},
+        {"step": 16,"name": "QC Inspection and Sign-Off",                  "hours": 0.25, "notes": "Point-by-point QC checklist, apply QC pass card"},
+        {"step": 17,"name": "Packaging",                                   "hours": 0.25, "notes": "Partially disassemble (front wheel, bars), foam wrap, box"}
+      ],
+
+      "time_summary": {
+        "total_assembly_hours_per_unit_single": 5.50,
+        "total_assembly_hours_per_unit_batch_50": 4.00,
+        "labor_cost_per_unit_usd": 156.75,
+        "units_per_worker_per_day": 1.5,
+        "days_from_all_parts_received_to_ship": 2,
+        "days_from_order_placed_to_ship_d2c": 52,
+        "note_on_batch": "Batch production amortizes setup, kitting, and wheel truing jig time. 50-unit run assumes dedicated wheel builder."
+      },
+
+      "total_lead_time_breakdown": {
+        "supplier_production_days": 45,
+        "inbound_transit_days": 5,
+        "assembly_and_qc_days": 2,
+        "outbound_shipping_days_domestic": "3-7",
+        "total_d2c_fulfillment_days_domestic": "55-59"
+      }
+    },
+
+    {
+      "bike_sku": "SKU-RD-APX700",
+      "bike_model": "Apex Sprint 700",
+      "complexity": "Medium-High",
+
+      "supplier_lead_times": {
+        "critical_path_part": "Carbon Road Frame (FF-FR-RD-001)",
+        "critical_path_supplier": "Veloforge Industries — Taichung, Taiwan (SUP-001)",
+        "critical_path_lead_days": 42,
+        "longest_non_critical_lead_days": 35,
+        "all_parts_expected_at_facility_by_day": 46,
+        "note": "Carbon frame is sea-freighted via Taichung Port; 18-day transit adds to 42-day production lead. STI shifters (SUP-002, 35 days) arrive in parallel."
+      },
+
+      "assembly_steps": [
+        {"step": 1, "name": "Inbound Inspection and Parts Kitting",       "hours": 0.50, "notes": "Verify all 30 line items, inspect carbon frame for defects"},
+        {"step": 2, "name": "Frame Prep",                                  "hours": 0.50, "notes": "Press BB86, press headset cups, internal cable guide install"},
+        {"step": 3, "name": "Fork and Headset Assembly",                  "hours": 0.25, "notes": "Install fork, star nut, cut steerer, top cap"},
+        {"step": 4, "name": "Wheel Building — Front",                     "hours": 0.40, "notes": "Lace 32 spokes, tension, true to 0.3mm, install skewer"},
+        {"step": 5, "name": "Wheel Building — Rear",                      "hours": 0.40, "notes": "Lace 32 spokes, tension, true; install cassette"},
+        {"step": 6, "name": "Tire and Tube Installation",                  "hours": 0.20, "notes": "Mount 700x28 tires, inflate to 80 PSI"},
+        {"step": 7, "name": "Bottom Bracket and Crankset",                "hours": 0.25, "notes": "Press BB86, install cranks to spec torque, install chain"},
+        {"step": 8, "name": "Derailleur Installation",                     "hours": 0.40, "notes": "Mount FD braze-on, mount RD, set limit screws"},
+        {"step": 9, "name": "STI Lever and Brake Caliper Mount",          "hours": 0.40, "notes": "Wrap tape temporarily, mount STI levers, align calipers"},
+        {"step": 10,"name": "Cable Routing and Shifting Index",            "hours": 0.50, "notes": "Route all cables, index 2x11 shifting across full range"},
+        {"step": 11,"name": "Bar Tape Application",                        "hours": 0.25, "notes": "Wrap bars with cork tape, secure at hoods, finish at stem"},
+        {"step": 12,"name": "Saddle, Seatpost, Cockpit Finish",           "hours": 0.20, "notes": "Set seatpost height, saddle level, stem angle, torque all"},
+        {"step": 13,"name": "Pedals and Reflectors",                      "hours": 0.10, "notes": "Install clipless pedals with cleats in bag, attach reflectors"},
+        {"step": 14,"name": "Full Adjustment and Test Ride",               "hours": 0.50, "notes": "Verify 22-speed indexing, brake reach, check carbon torque specs"},
+        {"step": 15,"name": "QC Inspection and Sign-Off",                  "hours": 0.25, "notes": "QC checklist including carbon frame inspection for handling damage"},
+        {"step": 16,"name": "Packaging",                                   "hours": 0.25, "notes": "Remove front wheel and bars, foam wrap frame, box"}
+      ],
+
+      "time_summary": {
+        "total_assembly_hours_per_unit_single": 4.35,
+        "total_assembly_hours_per_unit_batch_50": 3.20,
+        "labor_cost_per_unit_usd": 123.98,
+        "units_per_worker_per_day": 2.0,
+        "days_from_all_parts_received_to_ship": 2,
+        "days_from_order_placed_to_ship_d2c": 48,
+        "note_on_batch": "Road bikes are faster to build than MTB; no hydraulic bleed and wheel lacing is 32H not 36H."
+      },
+
+      "total_lead_time_breakdown": {
+        "supplier_production_days": 42,
+        "inbound_transit_days": 4,
+        "assembly_and_qc_days": 2,
+        "outbound_shipping_days_domestic": "3-7",
+        "total_d2c_fulfillment_days_domestic": "51-55"
+      }
+    },
+
+    {
+      "bike_sku": "SKU-KD-APX20",
+      "bike_model": "Apex Scout 20",
+      "complexity": "Low",
+
+      "supplier_lead_times": {
+        "critical_path_part": "Hi-Ten Steel Kids Frame (FF-FR-KD-001)",
+        "critical_path_supplier": "Veloforge Industries — Taichung, Taiwan (SUP-001)",
+        "critical_path_lead_days": 28,
+        "longest_non_critical_lead_days": 25,
+        "all_parts_expected_at_facility_by_day": 32,
+        "note": "Simple steel frames have shortest lead time in portfolio. All other parts arrive within 25 days — frame is the single critical path item."
+      },
+
+      "assembly_steps": [
+        {"step": 1, "name": "Inbound Inspection and Parts Kitting",     "hours": 0.25, "notes": "Verify 24 line items, quick visual inspection"},
+        {"step": 2, "name": "Frame Prep",                                "hours": 0.25, "notes": "Thread BB, install threaded headset, grease all threads"},
+        {"step": 3, "name": "Fork Installation",                         "hours": 0.15, "notes": "Install quill stem, tighten headset cone"},
+        {"step": 4, "name": "Wheel Building — Front",                   "hours": 0.35, "notes": "Lace 36 spokes, tension, true; 20in wheel is quick"},
+        {"step": 5, "name": "Wheel Building — Rear",                    "hours": 0.35, "notes": "Lace 36 spokes, install freewheel, tension, true"},
+        {"step": 6, "name": "Tire and Tube Installation",                "hours": 0.15, "notes": "Mount 20x2.1 tires, inflate to 40 PSI"},
+        {"step": 7, "name": "Drivetrain — Cranks, Chain, Freewheel",   "hours": 0.25, "notes": "Thread BB, install cranks, size and install chain"},
+        {"step": 8, "name": "Brake Levers and V-Brake Calipers",        "hours": 0.25, "notes": "Mount short-reach levers, align calipers, route cables"},
+        {"step": 9, "name": "Cockpit, Grips, Saddle",                   "hours": 0.20, "notes": "Install handlebar, grips, saddle and seatpost, bolt-on axle nuts"},
+        {"step": 10,"name": "Adjustment, Reflectors, and Test",         "hours": 0.25, "notes": "Check brake function, verify axle nuts tight, install reflectors"},
+        {"step": 11,"name": "QC Inspection",                            "hours": 0.15, "notes": "Kids bike gets extra check: sharp edges, bolt tightness, brake pull"},
+        {"step": 12,"name": "Packaging",                                 "hours": 0.15, "notes": "Remove front wheel, foam wrap, box; include helmet sizing sticker"}
+      ],
+
+      "time_summary": {
+        "total_assembly_hours_per_unit_single": 2.00,
+        "total_assembly_hours_per_unit_batch_50": 1.50,
+        "labor_cost_per_unit_usd": 57.00,
+        "units_per_worker_per_day": 4.0,
+        "days_from_all_parts_received_to_ship": 1,
+        "days_from_order_placed_to_ship_d2c": 33,
+        "note_on_batch": "Highest throughput model; simple 1-speed drivetrain and V-brakes make this the fastest to assemble."
+      },
+
+      "total_lead_time_breakdown": {
+        "supplier_production_days": 28,
+        "inbound_transit_days": 4,
+        "assembly_and_qc_days": 1,
+        "outbound_shipping_days_domestic": "3-7",
+        "total_d2c_fulfillment_days_domestic": "36-40"
+      }
+    },
+
+    {
+      "bike_sku": "SKU-MC-APX26",
+      "bike_model": "Apex Drift 26",
+      "complexity": "Low-Medium",
+
+      "supplier_lead_times": {
+        "critical_path_part": "Chromoly Steel Cruiser Frame (FF-FR-MC-001)",
+        "critical_path_supplier": "Veloforge Industries — Taichung, Taiwan (SUP-001)",
+        "critical_path_lead_days": 30,
+        "longest_non_critical_lead_days": 28,
+        "all_parts_expected_at_facility_by_day": 34,
+        "note": "Chromoly frames require more tubing wall shaping than hi-ten; 2 additional days vs kids frame. All other parts converge by day 25."
+      },
+
+      "assembly_steps": [
+        {"step": 1, "name": "Inbound Inspection and Parts Kitting",     "hours": 0.25, "notes": "Verify 27 line items"},
+        {"step": 2, "name": "Frame Prep",                                "hours": 0.25, "notes": "Thread BB, press headset, grease all interfaces"},
+        {"step": 3, "name": "Springer Fork Installation",               "hours": 0.20, "notes": "Install and adjust springer fork, set preload, align"},
+        {"step": 4, "name": "Wheel Building — Front",                   "hours": 0.45, "notes": "Lace 36 spokes, tension, true 26in rim"},
+        {"step": 5, "name": "Wheel Building — Rear",                    "hours": 0.45, "notes": "Lace 36 spokes, install freewheel, tension, true"},
+        {"step": 6, "name": "Tire and Tube Installation",                "hours": 0.15, "notes": "Mount 26x2.0 balloon tires, inflate to 35 PSI"},
+        {"step": 7, "name": "Drivetrain — Cranks, Chain, Freewheel",   "hours": 0.20, "notes": "Install BB, cranks, size single-speed chain"},
+        {"step": 8, "name": "V-Brake Installation",                      "hours": 0.25, "notes": "Mount levers and calipers front and rear, route cables"},
+        {"step": 9, "name": "Cockpit and Saddle",                       "hours": 0.25, "notes": "Install swept-back bars, grips, spring saddle, seatpost"},
+        {"step": 10,"name": "Adjustment and Test",                       "hours": 0.25, "notes": "Verify brake function, chain tension, springer fork action"},
+        {"step": 11,"name": "QC Inspection",                            "hours": 0.20, "notes": "Chrome finish inspection, full functional check"},
+        {"step": 12,"name": "Packaging",                                 "hours": 0.15, "notes": "Remove front wheel, wrap chrome surfaces, box"}
+      ],
+
+      "time_summary": {
+        "total_assembly_hours_per_unit_single": 2.85,
+        "total_assembly_hours_per_unit_batch_50": 2.20,
+        "labor_cost_per_unit_usd": 81.23,
+        "units_per_worker_per_day": 2.8,
+        "days_from_all_parts_received_to_ship": 1,
+        "days_from_order_placed_to_ship_d2c": 35,
+        "note_on_batch": "Chrome and springer fork need extra care in packaging; adds time vs kids model despite similar drivetrain simplicity."
+      },
+
+      "total_lead_time_breakdown": {
+        "supplier_production_days": 30,
+        "inbound_transit_days": 4,
+        "assembly_and_qc_days": 1,
+        "outbound_shipping_days_domestic": "3-7",
+        "total_d2c_fulfillment_days_domestic": "38-42"
+      }
+    },
+
+    {
+      "bike_sku": "SKU-WH-APX700",
+      "bike_model": "Apex Glide 700",
+      "complexity": "Medium",
+
+      "supplier_lead_times": {
+        "critical_path_part": "6061 Aluminum Step-Through Hybrid Frame (FF-FR-WH-001)",
+        "critical_path_supplier": "Veloforge Industries — Taichung, Taiwan (SUP-001)",
+        "critical_path_lead_days": 35,
+        "longest_non_critical_lead_days": 30,
+        "all_parts_expected_at_facility_by_day": 39,
+        "note": "Step-through geometry adds hydroforming complexity. Rear derailleur (SUP-002, 22 days) and cassette arrive much earlier than the frame."
+      },
+
+      "assembly_steps": [
+        {"step": 1, "name": "Inbound Inspection and Parts Kitting",       "hours": 0.25, "notes": "Verify all 30 line items"},
+        {"step": 2, "name": "Frame Prep",                                  "hours": 0.35, "notes": "Thread BSA BB, press threadless headset, install fender mounts"},
+        {"step": 3, "name": "Fork and Headset Assembly",                  "hours": 0.20, "notes": "Install fork, steerer cut, install stem and spacers"},
+        {"step": 4, "name": "Wheel Building — Front",                     "hours": 0.40, "notes": "Lace 32 spokes, tension, true 700c rim"},
+        {"step": 5, "name": "Wheel Building — Rear",                      "hours": 0.40, "notes": "Lace 32 spokes, install cassette, tension, true"},
+        {"step": 6, "name": "Tire and Tube Installation",                  "hours": 0.20, "notes": "Mount 700x38 hybrid tires, inflate to 65 PSI"},
+        {"step": 7, "name": "Drivetrain — BB, Crankset, Chain",           "hours": 0.30, "notes": "Thread BB, install 1x crankset, size and install 8-speed chain"},
+        {"step": 8, "name": "Rear Derailleur and Grip Shifter",           "hours": 0.35, "notes": "Mount RD, route cable, install grip shifter, index 8 gears"},
+        {"step": 9, "name": "V-Brake Installation",                        "hours": 0.35, "notes": "Mount levers and calipers front and rear, route cables, bed pads"},
+        {"step": 10,"name": "Cockpit, Grips, Saddle",                     "hours": 0.20, "notes": "Install comfort bar, grips, comfort saddle, set heights"},
+        {"step": 11,"name": "Full Adjustment and Test Ride",               "hours": 0.35, "notes": "Verify 8-speed indexing, brake feel, upright position geometry"},
+        {"step": 12,"name": "QC Inspection",                              "hours": 0.20, "notes": "Step-through frame weld inspection, functional check"},
+        {"step": 13,"name": "Packaging",                                   "hours": 0.15, "notes": "Remove front wheel, wrap, box"}
+      ],
+
+      "time_summary": {
+        "total_assembly_hours_per_unit_single": 3.50,
+        "total_assembly_hours_per_unit_batch_50": 2.70,
+        "labor_cost_per_unit_usd": 99.75,
+        "units_per_worker_per_day": 2.3,
+        "days_from_all_parts_received_to_ship": 2,
+        "days_from_order_placed_to_ship_d2c": 41,
+        "note_on_batch": "1x drivetrain eliminates FD setup; hybrid is faster to build than MTB but slower than single-speed cruiser."
+      },
+
+      "total_lead_time_breakdown": {
+        "supplier_production_days": 35,
+        "inbound_transit_days": 4,
+        "assembly_and_qc_days": 2,
+        "outbound_shipping_days_domestic": "3-7",
+        "total_d2c_fulfillment_days_domestic": "44-48"
+      }
+    },
+
+    {
+      "bike_sku": "SKU-BX-APX20",
+      "bike_model": "Apex Street 20",
+      "complexity": "Low",
+
+      "supplier_lead_times": {
+        "critical_path_part": "Chromoly 4130 BMX Frame (FF-FR-BX-001)",
+        "critical_path_supplier": "Veloforge Industries — Taichung, Taiwan (SUP-001)",
+        "critical_path_lead_days": 28,
+        "longest_non_critical_lead_days": 25,
+        "all_parts_expected_at_facility_by_day": 32,
+        "note": "4130 CrMo butted tubing requires same lead time as kids steel frame. Fork (SUP-001, 28 days) and frame arrive on same shipment."
+      },
+
+      "assembly_steps": [
+        {"step": 1, "name": "Inbound Inspection and Parts Kitting",     "hours": 0.25, "notes": "Verify all 26 line items"},
+        {"step": 2, "name": "Frame Prep",                                "hours": 0.20, "notes": "Install mid BB, press headset, check welds and gussets"},
+        {"step": 3, "name": "Fork and Headset",                         "hours": 0.15, "notes": "Install fork, set headset, install top-load stem"},
+        {"step": 4, "name": "Wheel Building — Front",                   "hours": 0.35, "notes": "Lace 36 spokes, tension, true 20in BMX rim"},
+        {"step": 5, "name": "Wheel Building — Rear",                    "hours": 0.35, "notes": "Lace 36 spokes, install freewheel, tension, true"},
+        {"step": 6, "name": "Tire and Tube Installation",                "hours": 0.15, "notes": "Mount 20x2.1 BMX tires, inflate to 50 PSI"},
+        {"step": 7, "name": "3-Piece Crankset and Chain",               "hours": 0.25, "notes": "Install Mid BB spindle, thread cranks, size 1/8in chain"},
+        {"step": 8, "name": "Rear Brake Only",                           "hours": 0.20, "notes": "Mount single V-brake caliper rear, install lever, route cable"},
+        {"step": 9, "name": "Cockpit, Grips, Pivotal Saddle",           "hours": 0.20, "notes": "Install 2-piece bar, grips, pivotal saddle and post, axle nuts"},
+        {"step": 10,"name": "Adjustment, Reflectors, and Test",         "hours": 0.20, "notes": "Verify rear brake, chain tension, all nuts tight"},
+        {"step": 11,"name": "QC Inspection",                            "hours": 0.15, "notes": "Weld inspection, bolt torque check, head tube play check"},
+        {"step": 12,"name": "Packaging",                                 "hours": 0.15, "notes": "Remove front wheel, wrap bars, box"}
+      ],
+
+      "time_summary": {
+        "total_assembly_hours_per_unit_single": 2.60,
+        "total_assembly_hours_per_unit_batch_50": 2.00,
+        "labor_cost_per_unit_usd": 74.10,
+        "units_per_worker_per_day": 3.1,
+        "days_from_all_parts_received_to_ship": 1,
+        "days_from_order_placed_to_ship_d2c": 33,
+        "note_on_batch": "No derailleurs or hydraulics; fastest premium model to build. 3-piece crank takes slightly longer than kids cotterless but still simple."
+      },
+
+      "total_lead_time_breakdown": {
+        "supplier_production_days": 28,
+        "inbound_transit_days": 4,
+        "assembly_and_qc_days": 1,
+        "outbound_shipping_days_domestic": "3-7",
+        "total_d2c_fulfillment_days_domestic": "36-40"
+      }
+    }
+  ],
+
+  "fleet_summary": {
+    "fastest_to_build": {"sku": "SKU-KD-APX20", "hours_single_unit": 2.00},
+    "slowest_to_build": {"sku": "SKU-MTB-APX29", "hours_single_unit": 5.50},
+    "shortest_supplier_lead_days": {"sku": "SKU-KD-APX20", "days": 28},
+    "longest_supplier_lead_days": {"sku": "SKU-MTB-APX29", "days": 45},
+    "fastest_d2c_fulfillment_domestic_days": {"sku": "SKU-KD-APX20", "range": "36-40"},
+    "slowest_d2c_fulfillment_domestic_days": {"sku": "SKU-MTB-APX29", "range": "55-59"},
+    "shared_bottleneck": "Veloforge Industries (SUP-001, Taiwan) is the frame supplier for all 6 models and represents the single largest supply risk. Diversifying frame sourcing is recommended."
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "part_families": [
+    {
+      "family_code": "FF",
+      "family_name": "Frame and Fork",
+      "description": "Structural foundation of the bicycle. Includes the main frame, fork, and headset.",
+      "primary_supplier_ids": ["SUP-001", "SUP-007"],
+      "sub_families": [
+        {
+          "sub_code": "FF-FR",
+          "sub_name": "Frame Assembly",
+          "description": "Main structural triangle and rear triangle. Bike-type specific — not interchangeable across models.",
+          "parts": [
+            "Main Frame (head tube, top tube, down tube, seat tube)",
+            "Rear Triangle (chainstays, seatstays)",
+            "Dropout Set (rear axle interface)",
+            "Cable Routing Ports (internal or external)"
+          ]
+        },
+        {
+          "sub_code": "FF-FK",
+          "sub_name": "Fork",
+          "description": "Front fork connecting the wheel to the headset. Rigid or suspension depending on model.",
+          "parts": [
+            "Fork Crown",
+            "Fork Blades (legs)",
+            "Fork Steerer Tube",
+            "Suspension Internals (spring, damper — MTB only)"
+          ]
+        },
+        {
+          "sub_code": "FF-HS",
+          "sub_name": "Headset",
+          "description": "Bearing assembly allowing fork to rotate within the head tube.",
+          "parts": [
+            "Upper Headset Cup",
+            "Lower Headset Cup",
+            "Bearing Cartridges (upper and lower)",
+            "Top Cap and Star Nut"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "DT",
+      "family_name": "Drivetrain",
+      "description": "All components transferring pedal power to the rear wheel. Includes cranks, gearing, shifting, and chain.",
+      "primary_supplier_ids": ["SUP-002"],
+      "sub_families": [
+        {
+          "sub_code": "DT-CS",
+          "sub_name": "Crankset",
+          "description": "Crank arms and chainrings that attach to the bottom bracket spindle.",
+          "parts": [
+            "Left Crank Arm",
+            "Right Crank Arm (with spider)",
+            "Chainring(s)",
+            "Crank Bolt Set"
+          ]
+        },
+        {
+          "sub_code": "DT-BB",
+          "sub_name": "Bottom Bracket",
+          "description": "Bearing assembly in the frame's BB shell accepting the crank spindle.",
+          "parts": [
+            "Bearing Cups (drive and non-drive)",
+            "Spindle (if external BB)",
+            "Locking Ring"
+          ]
+        },
+        {
+          "sub_code": "DT-CH",
+          "sub_name": "Chain",
+          "description": "Roller chain transmitting power from chainring to cassette. Speed-count specific.",
+          "parts": [
+            "Chain Links",
+            "Master Link (quick-link connector)"
+          ]
+        },
+        {
+          "sub_code": "DT-CG",
+          "sub_name": "Cassette and Freewheel",
+          "description": "Rear gearing stack on the rear hub. Cassette for multi-speed; freewheel for 1-speed.",
+          "parts": [
+            "Sprocket Stack or Individual Sprockets",
+            "Spider/Carrier (cassette)",
+            "Lockring"
+          ]
+        },
+        {
+          "sub_code": "DT-FD",
+          "sub_name": "Front Derailleur",
+          "description": "Shifts chain between chainrings. Not present on 1x or single-speed drivetrains.",
+          "parts": [
+            "Derailleur Body",
+            "Cage (inner and outer plate)",
+            "Clamp or Band"
+          ]
+        },
+        {
+          "sub_code": "DT-RD",
+          "sub_name": "Rear Derailleur",
+          "description": "Shifts chain across cassette sprockets. Not present on single-speed builds.",
+          "parts": [
+            "Derailleur Body (B-knuckle, P-knuckle)",
+            "Parallelogram",
+            "Cage with Jockey Wheels",
+            "Return Spring"
+          ]
+        },
+        {
+          "sub_code": "DT-SH",
+          "sub_name": "Shifters",
+          "description": "Lever controls actuating derailleurs via cables. STI road shifters integrate brake levers.",
+          "parts": [
+            "Shifter Body (left and right)",
+            "Ratchet Mechanism",
+            "Clamp or Bar-End Mount"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "BR",
+      "family_name": "Brakes",
+      "description": "Stopping system including levers, calipers, pads, rotors, and cables or hydraulic lines.",
+      "primary_supplier_ids": ["SUP-003", "SUP-009"],
+      "sub_families": [
+        {
+          "sub_code": "BR-LV",
+          "sub_name": "Brake Levers",
+          "description": "Hand-operated levers actuating brake calipers. Shape varies by handlebar type.",
+          "parts": [
+            "Lever Body (left and right)",
+            "Pivot Bolt",
+            "Reach Adjust Screw",
+            "Hydraulic Reservoir (hydraulic levers only)",
+            "Clamp"
+          ]
+        },
+        {
+          "sub_code": "BR-CL",
+          "sub_name": "Brake Calipers",
+          "description": "Mechanism that clamps pads onto rim or rotor. Front and rear pair.",
+          "parts": [
+            "Caliper Body (front)",
+            "Caliper Body (rear)",
+            "Pad Retention Hardware",
+            "Mounting Bolts"
+          ]
+        },
+        {
+          "sub_code": "BR-RT",
+          "sub_name": "Disc Rotors",
+          "description": "Steel rotors mounted to hub for disc brake models. Front and rear pair.",
+          "parts": [
+            "Front Rotor",
+            "Rear Rotor",
+            "Rotor Bolts (6x per rotor)"
+          ]
+        },
+        {
+          "sub_code": "BR-PD",
+          "sub_name": "Brake Pads",
+          "description": "Friction material contacting rim or rotor. Must match caliper and brake type.",
+          "parts": [
+            "Pad Material (organic or sintered)",
+            "Backing Plate",
+            "Retention Clip or Pin"
+          ]
+        },
+        {
+          "sub_code": "BR-CB",
+          "sub_name": "Brake Cables and Housing",
+          "description": "Mechanical actuation lines for rim and V-brake systems.",
+          "parts": [
+            "Inner Cables (stainless steel, front and rear)",
+            "Outer Housing",
+            "End Caps",
+            "Cable Pinch Bolts"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "WH",
+      "family_name": "Wheels",
+      "description": "Complete wheel system including rims, hubs, spokes, tires, tubes, and rim tape. Size is model-specific.",
+      "primary_supplier_ids": ["SUP-004", "SUP-010"],
+      "sub_families": [
+        {
+          "sub_code": "WH-RM",
+          "sub_name": "Rims",
+          "description": "Aluminum hoops forming the wheel structure. Hole count and width vary by use.",
+          "parts": [
+            "Rim (front)",
+            "Rim (rear)",
+            "Rim Eyelets (reinforcement at spoke holes)"
+          ]
+        },
+        {
+          "sub_code": "WH-HB",
+          "sub_name": "Hubs",
+          "description": "Central axle assemblies with sealed bearings. Front and rear are different parts.",
+          "parts": [
+            "Hub Shell",
+            "Sealed Bearing Cartridges",
+            "Axle",
+            "Freehub Body or Freewheel Thread (rear only)",
+            "Locknut or QR Skewer"
+          ]
+        },
+        {
+          "sub_code": "WH-SP",
+          "sub_name": "Spokes and Nipples",
+          "description": "Tensioned wire connecting rim to hub. Supplied per-wheel (36 or 32 count).",
+          "parts": [
+            "Spokes (stainless steel, J-bend)",
+            "Brass Nipples"
+          ]
+        },
+        {
+          "sub_code": "WH-TR",
+          "sub_name": "Tires",
+          "description": "Outer rubber tire. Width and tread pattern vary by bike type. Supplied as a pair.",
+          "parts": [
+            "Front Tire",
+            "Rear Tire"
+          ]
+        },
+        {
+          "sub_code": "WH-TB",
+          "sub_name": "Inner Tubes",
+          "description": "Air-filled tube inside the tire. Valve type (Presta or Schrader) depends on rim.",
+          "parts": [
+            "Front Inner Tube",
+            "Rear Inner Tube"
+          ]
+        },
+        {
+          "sub_code": "WH-RT",
+          "sub_name": "Rim Tape",
+          "description": "Protective strip covering spoke holes inside the rim to prevent tube punctures.",
+          "parts": [
+            "Front Rim Tape Strip",
+            "Rear Rim Tape Strip"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "CK",
+      "family_name": "Cockpit",
+      "description": "Rider-contact control components: handlebar, stem, grips or bar tape.",
+      "primary_supplier_ids": ["SUP-005"],
+      "sub_families": [
+        {
+          "sub_code": "CK-HB",
+          "sub_name": "Handlebar",
+          "description": "Steering bar. Shape varies significantly by bike type (drop, riser, flat, cruiser, BMX).",
+          "parts": [
+            "Handlebar Tube",
+            "Bar Clamp Section (31.8mm or 25.4mm)"
+          ]
+        },
+        {
+          "sub_code": "CK-ST",
+          "sub_name": "Stem",
+          "description": "Connects fork steerer tube to handlebar. Angle and length affect riding position.",
+          "parts": [
+            "Stem Body",
+            "Faceplate",
+            "Faceplate Bolts (4x)",
+            "Steerer Clamp Bolts (2x)"
+          ]
+        },
+        {
+          "sub_code": "CK-GR",
+          "sub_name": "Grips and Bar Tape",
+          "description": "Handlebar end covering for grip and comfort. Grips for flat bars; bar tape for drop bars.",
+          "parts": [
+            "Left Grip or Tape Roll",
+            "Right Grip or Tape Roll",
+            "End Plugs (flat bar grips only)"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "SS",
+      "family_name": "Saddle and Seatpost",
+      "description": "Rider seating assembly: saddle, seatpost, and seatpost clamp.",
+      "primary_supplier_ids": ["SUP-006", "SUP-005"],
+      "sub_families": [
+        {
+          "sub_code": "SS-SD",
+          "sub_name": "Saddle",
+          "description": "Seat. Shape, width, and padding vary by rider type and riding style.",
+          "parts": [
+            "Saddle Shell (nylon or composite)",
+            "Padding Foam",
+            "Cover Material (synthetic or leather)",
+            "Rail (CrMo or titanium)"
+          ]
+        },
+        {
+          "sub_code": "SS-SP",
+          "sub_name": "Seatpost",
+          "description": "Tube connecting saddle to frame seat tube. Diameter must match frame.",
+          "parts": [
+            "Seatpost Tube",
+            "Saddle Clamp Head",
+            "Clamp Bolts"
+          ]
+        },
+        {
+          "sub_code": "SS-SC",
+          "sub_name": "Seatpost Clamp",
+          "description": "Collar clamping seatpost to frame seat tube. Diameter matches frame's seat tube OD.",
+          "parts": [
+            "Clamp Collar",
+            "Clamp Bolt and Nut"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "PD",
+      "family_name": "Pedals",
+      "description": "Foot interface components. Threaded into crank arms (9/16 inch for adult; 1/2 inch for kids).",
+      "primary_supplier_ids": ["SUP-008"],
+      "sub_families": [
+        {
+          "sub_code": "PD-PL",
+          "sub_name": "Pedal Set",
+          "description": "Left and right pedal pair. Platform for flat-footed use; clipless for performance.",
+          "parts": [
+            "Right Pedal Body (standard thread)",
+            "Left Pedal Body (reverse thread)",
+            "Sealed Bearings",
+            "Axle Spindle",
+            "End Cap or Dustcap"
+          ]
+        }
+      ]
+    },
+    {
+      "family_code": "HW",
+      "family_name": "Hardware and Accessories",
+      "description": "Ancillary parts required for assembly and compliance: cables, bolts, reflectors, axles, and packaging.",
+      "primary_supplier_ids": ["SUP-009"],
+      "sub_families": [
+        {
+          "sub_code": "HW-CB",
+          "sub_name": "Derailleur Cables and Housing",
+          "description": "Shift cable inner wires and outer housing for mechanical derailleurs.",
+          "parts": [
+            "Front Shift Cable",
+            "Rear Shift Cable",
+            "Outer Housing (pre-cut sections)",
+            "End Caps and Cable Tips"
+          ]
+        },
+        {
+          "sub_code": "HW-BT",
+          "sub_name": "Bolt and Hardware Kit",
+          "description": "Assorted bolts, washers, and nuts required for full assembly.",
+          "parts": [
+            "M5 Bolts (water bottle mounts, accessory mounts)",
+            "M6 Bolts (brake mounts, derailleur mounts)",
+            "Lockwashers",
+            "Nyloc Nuts"
+          ]
+        },
+        {
+          "sub_code": "HW-RF",
+          "sub_name": "Reflector Set",
+          "description": "Front, rear, and spoke reflectors required by CPSC regulations for US market.",
+          "parts": [
+            "Front White Reflector",
+            "Rear Red Reflector",
+            "Spoke Reflectors (pair)"
+          ]
+        },
+        {
+          "sub_code": "HW-QR",
+          "sub_name": "Quick Release Skewers",
+          "description": "Cam-lever skewers for tool-free wheel removal. Front and rear pair.",
+          "parts": [
+            "Front QR Skewer",
+            "Rear QR Skewer",
+            "Springs (x4)"
+          ]
+        },
+        {
+          "sub_code": "HW-AX",
+          "sub_name": "Bolt-On Axle Set",
+          "description": "Nutted axle set for bikes without quick-release (kids and BMX).",
+          "parts": [
+            "Front Axle Bolts and Washers",
+            "Rear Axle Bolts and Washers"
+          ]
+        },
+        {
+          "sub_code": "HW-PG",
+          "sub_name": "Packaging Kit",
+          "description": "Branded retail packaging for D2C shipment. Includes all protective materials.",
+          "parts": [
+            "Outer Cardboard Box (bike-specific size)",
+            "Foam Inserts (frame and fork)",
+            "Cable Ties and Foam Padding",
+            "Assembly Manual",
+            "Tool Kit Card"
+          ]
+        }
+      ]
+    }
+  ]
+}
